@@ -15,12 +15,11 @@ const Container = styled.View`
   flex-direction: column;
   background-color: white;
   align-items: center;
+  align-content: space-around;
   justify-content: space-evenly;
   margin-top: 10;
 `;
 const SubContainer = styled.View`
-  flex: 1;
-  align-items: center;
   background-color: white;
 `;
 const Logo = styled.Text`
@@ -41,40 +40,42 @@ const Email = styled.TextInput`
   border-radius: 7;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  padding: 20px;
+  padding: 15px;
 `;
 const Passwd = styled.TextInput`
   font-size: 20;
   width: 300;
   border: 2px solid #a0a0a0;
   border-radius: 7;
-  padding: 20px;
+  padding: 15px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top-width: 0;
 `;
 const GetPasswd = styled.Text`
-  flex: 1;
   color: #a0a0a0;
   width: 300;
   font-size: 15;
   text-align: right;
   font-weight: 100;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 const LabelText = styled.Text`
-  width: 300;
   color: black;
+  width: 300;
   text-align: center;
 `;
 const LoginText = styled(LabelText)`
   font-size: 25;
   font-weight: 300;
   background-color: #a0a0a0;
+  padding: 15px;
   border-radius: 7;
 `;
 const SignupText = styled(LabelText)`
   color: #a0a0a0;
+  padding: 5px;
 `;
 const SignupButton = styled(LabelText)`
   font-size: 15;
@@ -83,6 +84,7 @@ export default class Signup extends Component {
   render() {
     return (
       <Container>
+        <StatusBar barStyle="light-content" />
         <SubContainer>
           <Logo>Spark</Logo>
           <Slogun>Mobile UI Kit</Slogun>
@@ -96,14 +98,18 @@ export default class Signup extends Component {
             placeholder={"Password"}
             underlineColorAndroid={"transparent"}
           />
-          <GetPasswd>Forgot Password?</GetPasswd>
+          <TouchableOpacity>
+            <GetPasswd>Forgot Password?</GetPasswd>
+          </TouchableOpacity>
           <TouchableOpacity>
             <LoginText>Login</LoginText>
           </TouchableOpacity>
         </SubContainer>
         <SubContainer>
           <SignupText>New member?</SignupText>
-          <SignupButton>CREATE ACCOUNT</SignupButton>
+          <TouchableOpacity>
+            <SignupButton>CREATE ACCOUNT</SignupButton>
+          </TouchableOpacity>
         </SubContainer>
       </Container>
     );
