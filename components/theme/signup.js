@@ -1,13 +1,4 @@
-import React, { Component } from "react";
-import {
-  Text,
-  View,
-  TextInput,
-  Button,
-  TouchableOpacity,
-  StatusBar,
-  Dimensions
-} from "react-native";
+import { Dimensions } from "react-native";
 import styled, { injectGlobal, ThemeProvider } from "styled-components";
 const { width, height } = Dimensions.get("window");
 export const Container = styled.View`
