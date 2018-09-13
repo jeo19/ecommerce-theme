@@ -58,10 +58,10 @@ export const ProductName = styled.Text`
   font-size: 15;
   font-weight: bold;
   text-align: left;
-  padding-left: 10px;
+  padding-left: 8px;
 `;
 export const ProductCost = styled.View`
-  padding-left: 10px;
+  padding-left: 8px;
   flex-direction: row;
 `;
 export const ProductNcost = styled.Text`
@@ -69,17 +69,43 @@ export const ProductNcost = styled.Text`
   text-align: left;
 `;
 export const ProductPcost = styled.Text`
-  font-size: 14;
+  font-size: 13;
   text-align: left;
-  padding-left: 5px;
+  padding-left: 3px;
   padding-top: 3px;
   color: #a0a0a0;
   text-decoration-line: line-through;
 `;
 export const ProductOff = styled.Text`
-  font-size: 14;
+  font-size: 11;
   text-align: left;
-  padding-left: 5px;
+  padding-left: 2px;
   padding-top: 3px;
   color: #a0a0a0;
+`;
+export const NotifyText = styled.Text`
+  font-size: 13;
+  text-align: center;
+`;
+export const NotifyIcon = styled.Text`
+  font-size: 9;
+  text-align: center;
+  width: ${responsiveWidth(4)};
+  height: ${responsiveWidth(4)};
+  border-radius: 15;
+  background-color: #34ce76;
+  color: white;
+`;
+export const CartText = styled.Text`
+  font-size: 13;
+  text-align: center;
+`;
+export const CartIcon = styled.Text`
+  font-size: 9;
+  text-align: center;
+  width: ${responsiveWidth(4)};
+  height: ${responsiveWidth(4)};
+  border-radius: 15;
+  background-color: #2524e2;
+  color: white;
 `;

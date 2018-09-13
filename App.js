@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SignupPage from "./components/pages/SignupPage";
-import { Navigation } from "react-native-navigation";
+import RootStack from "./components/pages/Navigation";
 export default class App extends Component {
   render() {
-    return <SignupPage />;
+    return (
+      <RootStack>
+        <SignupPage />
+      </RootStack>
+    );
   }
 }

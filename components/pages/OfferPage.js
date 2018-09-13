@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { TouchableOpacity, StatusBar, Dimensions, Text } from "react-native";
+import {
+  TouchableOpacity,
+  StatusBar,
+  Dimensions,
+  Text,
+  View
+} from "react-native";
 import {
   responsiveHeight,
   responsiveWidth,
@@ -20,10 +26,43 @@ import {
   ProductCost,
   ProductNcost,
   ProductPcost,
-  ProductOff
+  ProductOff,
+  NotifyText,
+  NotifyIcon,
+  CartText,
+  CartIcon
 } from "../theme/Offer";
 import { FontAwesome } from "@expo/vector-icons";
 export default class OfferPage extends Component {
+  static navigationOptions = {
+    headerTitle: <Text style={{ fontSize: 14, fontWeight: "bold" }}>Home</Text>,
+    headerRight: (
+      <View
+        style={{
+          flexDirection: "row"
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            flexDirection: "row"
+          }}
+        >
+          <NotifyText>Notify</NotifyText>
+          <NotifyIcon>2</NotifyIcon>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flexDirection: "row",
+            paddingLeft: 5,
+            paddingRight: 5
+          }}
+        >
+          <CartText>Cart</CartText>
+          <CartIcon>1</CartIcon>
+        </TouchableOpacity>
+      </View>
+    )
+  };
   render() {
     const ProductItems = [
       {
@@ -126,8 +165,6 @@ export default class OfferPage extends Component {
                   <Text />
                 )}
               </ProductCost>
-              {/* <Text style={styles.itemName}>{item.name}</Text>
-            <Text style={styles.itemCode}>{item.code}</Text> */}
             </ProductContainer>
           )}
         />
